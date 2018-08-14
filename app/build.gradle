@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "www.mangosis.com.datong"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile 'com.youth.banner:banner:1.4.8'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.github.bumptech.glide:glide:4.0.0'
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.squareup.okio:okio:1.11.0'
+    compile 'com.google.code.gson:gson:2.8.4'
+    compile 'id.zelory:compressor:2.0.0'
+    compile 'liji.library.dev:citypickerview:3.1.7'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-13'
+}
