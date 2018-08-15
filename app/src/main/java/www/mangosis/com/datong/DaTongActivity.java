@@ -19,7 +19,7 @@ public class DaTongActivity extends BaseActivity {
         setContentView(R.layout.activity_da_tong);
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottom_bar);
         bottomBar.setContainer(R.id.container)
-                .setTitleBeforeAndAfterColor("#666666", "#1698FD")
+                .setTitleBeforeAndAfterColor("#333333", "#1698FD")
                 .addItem(HomePageFragment.class,
                         "主页",
                         R.drawable.home,

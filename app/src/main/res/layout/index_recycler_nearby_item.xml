@@ -8,24 +8,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        app:layout_heightPercent="55%w">
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_heightPercent="58%w">
 
-        <ImageView
-            android:id="@+id/recommend_first_image"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:scaleType="fitXY"
-            android:src="@drawable/hotlist" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="附近推荐"
+            android:textColor="@color/common_black"
+            android:textSize="@dimen/title" />
+
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -35,13 +36,23 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/recommend_first_image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/new_product" />
+
+                <ImageView
                     android:id="@+id/recommend_second_image"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="4dp"
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
-                    android:src="@drawable/new_product" />
+                    android:scaleType="fitXY"
+                    android:src="@drawable/special_offer" />
 
                 <ImageView
                     android:id="@+id/recommend_third_image"
@@ -50,6 +61,7 @@
                     android:layout_marginBottom="4dp"
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:src="@drawable/special_offer" />
 
             </LinearLayout>
@@ -64,9 +76,9 @@
                     android:id="@+id/recommend_forth_image"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:src="@drawable/like" />
 
                 <ImageView
@@ -76,6 +88,17 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/coupons" />
+
+                <ImageView
+                    android:id="@+id/recommend_sixth_image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
                     android:src="@drawable/coupons" />
             </LinearLayout>
 

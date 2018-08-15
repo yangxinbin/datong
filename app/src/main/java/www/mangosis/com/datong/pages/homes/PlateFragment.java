@@ -18,30 +18,24 @@ import java.util.HashMap;
 import www.mangosis.com.datong.R;
 
 
-public class TestFragment extends Fragment
+public class PlateFragment extends Fragment
 {
     GridView gridView;
 
     int [] res = {
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,};
-
-
-    String[] titles = {"1","2","3","4","5","6","7","8"};
+            R.drawable.food,
+            R.drawable.play,
+            R.drawable.travel,
+            R.drawable.shopping,
+            R.drawable.supermarket,
+            R.drawable.takeaway,};
+    String [] titles = {"享美食","享娱乐","享旅游","享购物","享农超","外卖"};
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.grid,container,false);
         gridView = (GridView) view.findViewById(R.id.gridview);
-
-
         ArrayList<HashMap<String, Object>> item = new ArrayList<HashMap<String, Object>>();
         for (int i = 0; i < res.length; i++)
         {

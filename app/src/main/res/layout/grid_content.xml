@@ -18,7 +18,7 @@
         app:layout_marginTopPercent="10.4%w"
         app:layout_textSizePercent="14%w"
         android:id="@+id/text"
-        android:textColor="#5a5b5d"
+        android:textColor="@color/common_black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </com.zhy.android.percent.support.PercentLinearLayout>
