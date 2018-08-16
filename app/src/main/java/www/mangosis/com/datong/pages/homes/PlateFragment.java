@@ -1,5 +1,6 @@
 package www.mangosis.com.datong.pages.homes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,13 +10,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import www.mangosis.com.datong.R;
+import www.mangosis.com.datong.waimai.WaiMaiActivity;
 
 
 public class PlateFragment extends Fragment
@@ -52,7 +53,10 @@ public class PlateFragment extends Fragment
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(),titles[position], Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),titles[position], Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), WaiMaiActivity.class);
+                startActivity(intent);
+                //getActivity().finish();
             }
         });
         return  view;
