@@ -12,7 +12,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
         android:orientation="vertical"
-        app:layout_heightPercent="58%w">
+        app:layout_heightPercent="60%w">
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
                     android:layout_marginBottom="4dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@drawable/new_product" />
+                    android:src="@drawable/food_nearby" />
 
                 <ImageView
                     android:id="@+id/recommend_second_image"
@@ -52,7 +52,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@drawable/special_offer" />
+                    android:src="@drawable/specialty_nearby" />
 
                 <ImageView
                     android:id="@+id/recommend_third_image"
@@ -62,7 +62,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@drawable/special_offer" />
+                    android:src="@drawable/attractions_nearby" />
 
             </LinearLayout>
 
@@ -79,7 +79,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@drawable/like" />
+                    android:src="@drawable/play_nearby" />
 
                 <ImageView
                     android:id="@+id/recommend_fifth_image"
@@ -89,7 +89,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@drawable/coupons" />
+                    android:src="@drawable/supermarket_nearby" />
 
                 <ImageView
                     android:id="@+id/recommend_sixth_image"
@@ -99,7 +99,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
-                    android:src="@drawable/coupons" />
+                    android:src="@drawable/life_nearby" />
             </LinearLayout>
 
         </LinearLayout>
