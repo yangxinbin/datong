@@ -10,14 +10,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
         android:orientation="vertical"
-        app:layout_heightPercent="60%w">
+        app:layout_heightPercent="52%w">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:text="附近推荐"
             android:textColor="@color/common_black"
             android:textSize="@dimen/title" />
@@ -103,5 +102,15 @@
             </LinearLayout>
 
         </LinearLayout>
+
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="精品推荐"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/common_black"
+        android:textSize="@dimen/title" />
 </com.zhy.android.percent.support.PercentLinearLayout>

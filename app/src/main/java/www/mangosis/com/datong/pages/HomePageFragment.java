@@ -1,6 +1,5 @@
 package www.mangosis.com.datong.pages;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -34,8 +32,8 @@ public class HomePageFragment extends Fragment {
     @Bind(R.id.refresh)
     SmartRefreshLayout refresh;
     HomePageAdapter homePageAdapter;
-    @Bind(R.id.et_search)
-    EditText etSearch;
+/*    @Bind(R.id.et_search)
+    EditText etSearch;*/
     private boolean isFirstEnter = true;
 
     @Nullable
@@ -43,12 +41,12 @@ public class HomePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.homepage_fragment, container, false);
         ButterKnife.bind(this, view);
-        etSearch.setOnClickListener(new View.OnClickListener() {
+/*        etSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 etSearch.setCursorVisible(true);
             }
-        });
+        });*/
         initView();
         refreshAndLoadMore();
         return view;

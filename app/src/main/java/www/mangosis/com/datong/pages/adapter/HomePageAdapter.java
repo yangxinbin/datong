@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -57,7 +59,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                         .inflate(R.layout.index_recycler_nearby, parent, false));
             case TYPE_HOT_ACTIVITY:
                 return new PopularPlacesViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.index_recycler_popular_places_item, parent, false));
+                        .inflate(R.layout.homepage_nice_item, parent, false));
             default:
                 return null;
         }
@@ -86,19 +88,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         } else if (holder instanceof NearbyViewHolder) {
 
         } else if (holder instanceof PopularPlacesViewHolder) {
-            ((PopularPlacesViewHolder) holder).hot_title_place.setVisibility(View.VISIBLE);
-            if (position != 4)
-                ((PopularPlacesViewHolder) holder).hot_title_place.setVisibility(View.GONE);
 
-            ((PopularPlacesViewHolder) holder).stop_car_sign.setVisibility(View.VISIBLE);
-            for (int i = 0; i < hotPlaceHidePosition.length; i++) {
-                if (position == hotPlaceHidePosition[i]) {
-
-                    ((PopularPlacesViewHolder) holder).stop_car_sign.setVisibility(View.INVISIBLE);
-                }
-            }
-            Glide.with(context).load("http://img.taopic.com/uploads/allimg/130612/318764-1306120IZ443.jpg")
-                    .into(((PopularPlacesViewHolder) holder).hot_back);
         }
 
     }
@@ -210,16 +200,20 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     * */
 
     public class PopularPlacesViewHolder extends RecyclerView.ViewHolder {
-        PercentLinearLayout hot_title_place;
-        ImageView stop_car_sign, hot_back;
+        LinearLayout list_item;
+        ImageView pic_1;
+        TextView txt_name,tx_money,txt_what,txt_place,tx_far;
 
         public PopularPlacesViewHolder(View itemView) {
             super(itemView);
-            hot_title_place = (PercentLinearLayout) itemView.findViewById(R.id.hot_title_place);
-            stop_car_sign = (ImageView) itemView.findViewById(R.id.stop_car_sign);
-            hot_back = (ImageView) itemView.findViewById(R.id.hot_back_img);
+            list_item = (LinearLayout) itemView.findViewById(R.id.list_item);
+            pic_1 = (ImageView) itemView.findViewById(R.id.pic_1);
+            txt_name = (TextView) itemView.findViewById(R.id.txt_name);
+            tx_money = (TextView) itemView.findViewById(R.id.tx_money);
+            txt_what = (TextView) itemView.findViewById(R.id.txt_what);
+            txt_place = (TextView) itemView.findViewById(R.id.txt_place);
+            tx_far = (TextView) itemView.findViewById(R.id.tx_far);
+
         }
     }
-
-
 }
