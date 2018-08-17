@@ -1,8 +1,10 @@
 package www.mangosis.com.datong.waimai;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
+import www.mangosis.com.datong.DaTongActivity;
 import www.mangosis.com.datong.R;
 import www.mangosis.com.datong.base.BaseActivity;
 import www.mangosis.com.datong.view.BottomBar;

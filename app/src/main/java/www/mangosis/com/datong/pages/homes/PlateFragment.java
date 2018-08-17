@@ -56,7 +56,6 @@ public class PlateFragment extends Fragment
                 //Toast.makeText(getContext(),titles[position], Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), WaiMaiActivity.class);
                 startActivity(intent);
-                //getActivity().finish();
             }
         });
         return  view;
