@@ -78,6 +78,7 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     .setBannerTitles(pathsTitle)
                     .setBannerStyle(BannerConfig.CIRCLE_INDICATOR)
                     .setImageLoader(new GlideImageLoader())
+                    .setDelayTime(5000)
                     // .setOnBannerClickListener(this)
                     .start();
         } else if (holder instanceof CirclerShowViewHolder) {
