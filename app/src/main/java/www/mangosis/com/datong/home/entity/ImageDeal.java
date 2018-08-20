@@ -17,9 +17,10 @@ import www.mangosis.com.datong.R;
 public class ImageDeal {
     private static List<String> banner_images = new ArrayList<>();
     private volatile static ImageDeal imageDeal;
-    Context mContext;
+    private Context mContext;
     public ImageDeal(Context context) {
         this.mContext = context;
+        banner_images.clear();
     }
     public List<String> getBanner_images() {
         banner_images.add(getResourcesUri(R.drawable.banner));

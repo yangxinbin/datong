@@ -68,7 +68,6 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof BannerViewHolder) {
             ImageDeal imageDeal = new ImageDeal(context);
-            banner_images.clear();
             banner_images = imageDeal.getBanner_images();
             List<String> pathsTitle = new ArrayList<>();
             for (int i = 0; i < banner_images.size(); i++) {

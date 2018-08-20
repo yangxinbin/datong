@@ -32,9 +32,9 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     //type
     public static final int TYPE_CIRCLER_SHOW = 0;
     public static final int TYPE_BANNER = 1;
-    public static final int TYPE_RECOMMEND_ACTIVITY = 2;
-    public static final int TYPE_NEARBY_ACTIVITY = 3;
-    public static final int TYPE_HOT_ACTIVITY = 4;
+    //public static final int TYPE_RECOMMEND_ACTIVITY = 2;
+    public static final int TYPE_NEARBY_ACTIVITY = 2;
+    public static final int TYPE_HOT_ACTIVITY = 3;
     private List<String> banner_images = new ArrayList<>();
 
     public WaiMaiAdapter(Context context) {
@@ -50,12 +50,12 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             case TYPE_BANNER:
                 return new BannerViewHolder(LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.index_recycler_banner, parent, false));
-            case TYPE_RECOMMEND_ACTIVITY:
+/*            case TYPE_RECOMMEND_ACTIVITY:
                 return new RecommendViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.index_recycler_recommend, parent, false));
+                        .inflate(R.layout.index_recycler_recommend, parent, false));*/
             case TYPE_NEARBY_ACTIVITY:
                 return new RecommendViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.index_recycler_nearby, parent, false));
+                        .inflate(R.layout.index_recycler_area, parent, false));
             case TYPE_HOT_ACTIVITY:
                 return new PopularPlacesViewHolder(LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.homepage_nice_item, parent, false));
@@ -68,7 +68,6 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof BannerViewHolder) {
             ImageDeal imageDeal = new ImageDeal(context);
-            banner_images.clear();
             banner_images = imageDeal.getBanner_images();
             List<String> pathsTitle = new ArrayList<>();
             for (int i = 0; i < banner_images.size(); i++) {
@@ -109,7 +108,7 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     switch (type) {
                         case TYPE_BANNER:
                         case TYPE_CIRCLER_SHOW:
-                        case TYPE_RECOMMEND_ACTIVITY:
+                        //case TYPE_RECOMMEND_ACTIVITY:
                         case TYPE_NEARBY_ACTIVITY:
                             return gridManager.getSpanCount();
                         default:
@@ -133,9 +132,9 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             return TYPE_CIRCLER_SHOW;
         } else if (position == 1) {
             return TYPE_BANNER;
-        } else if (position == 2) {
+        } /*else if (position == 2) {
             return TYPE_RECOMMEND_ACTIVITY;
-        } else if (position == 3) {
+        }*/ else if (position == 2) {
             return TYPE_NEARBY_ACTIVITY;
         } else {
             return TYPE_HOT_ACTIVITY;
