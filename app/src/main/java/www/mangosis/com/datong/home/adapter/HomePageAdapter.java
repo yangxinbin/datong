@@ -78,6 +78,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     .setBannerTitles(pathsTitle)
                     .setBannerStyle(BannerConfig.CIRCLE_INDICATOR)
                     .setImageLoader(new GlideImageLoader())
+                    .setDelayTime(5000)
                     // .setOnBannerClickListener(this)
                     .start();
         } else if (holder instanceof CirclerShowViewHolder) {
@@ -96,7 +97,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public void onAttachedToRecyclerView(final RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
-        Toast.makeText(context, "onAttachedToRecyclerView", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "onAttachedToRecyclerView", Toast.LENGTH_SHORT).show();
         RecyclerView.LayoutManager manager = recyclerView.getLayoutManager();
         if (manager instanceof GridLayoutManager) {
             Toast.makeText(context, "manager instanceof GridLayoutManager", Toast.LENGTH_SHORT).show();

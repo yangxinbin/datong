@@ -97,7 +97,7 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public void onAttachedToRecyclerView(final RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
-        Toast.makeText(context, "onAttachedToRecyclerView", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "onAttachedToRecyclerView", Toast.LENGTH_SHORT).show();
         RecyclerView.LayoutManager manager = recyclerView.getLayoutManager();
         if (manager instanceof GridLayoutManager) {
             Toast.makeText(context, "manager instanceof GridLayoutManager", Toast.LENGTH_SHORT).show();
