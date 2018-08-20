@@ -1,4 +1,4 @@
-package www.mangosis.com.datong.pages;
+package www.mangosis.com.datong.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,11 +14,11 @@ import www.mangosis.com.datong.R;
  * Created by admin on 2018/8/14.
  */
 
-public class DaTongFragment extends Fragment {
+public class PersonalFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.datong_fragment, container, false);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.personal_fragment, container, false);
         ButterKnife.bind(this, view);
         return view;
     }

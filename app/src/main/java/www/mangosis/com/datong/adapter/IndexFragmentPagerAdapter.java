@@ -1,4 +1,4 @@
-package www.mangosis.com.datong.pages.adapter;
+package www.mangosis.com.datong.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

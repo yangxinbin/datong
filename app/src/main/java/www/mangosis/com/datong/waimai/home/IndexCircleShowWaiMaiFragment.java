@@ -1,4 +1,4 @@
-package www.mangosis.com.datong.pages.homes;
+package www.mangosis.com.datong.waimai.home;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,10 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import www.mangosis.com.datong.R;
-import www.mangosis.com.datong.pages.adapter.IndexFragmentPagerAdapter;
 
-public class IndexCircleShowFragment extends Fragment {
+import www.mangosis.com.datong.R;
+import www.mangosis.com.datong.adapter.IndexFragmentPagerAdapter;
+import www.mangosis.com.datong.home.home.PlateFragment;
+
+public class IndexCircleShowWaiMaiFragment extends Fragment {
     Context context;
     int pointIndex = 0;
     View view = null;
@@ -70,7 +72,7 @@ public class IndexCircleShowFragment extends Fragment {
         index_recycler_circler_show_viewpager.setCurrentItem(index);
         linearLayout.getChildAt(pointIndex).setEnabled(true);
         IndexFragmentPagerAdapter indexFragmentPagerAdapter = new IndexFragmentPagerAdapter(getChildFragmentManager());
-        indexFragmentPagerAdapter.addFragment(new PlateFragment());
+        indexFragmentPagerAdapter.addFragment(new PlateWaiMaiFragment());
         //indexFragmentPagerAdapter.addFragment(new PlateFragment());
         //indexFragmentPagerAdapter.addFragment(new PlateFragment());
         index_recycler_circler_show_viewpager.setAdapter(indexFragmentPagerAdapter);

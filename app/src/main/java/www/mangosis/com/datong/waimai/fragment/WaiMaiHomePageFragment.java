@@ -19,7 +19,6 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import www.mangosis.com.datong.R;
-import www.mangosis.com.datong.pages.adapter.HomePageAdapter;
 import www.mangosis.com.datong.tools.header.ClassicsHeader;
 import www.mangosis.com.datong.waimai.adapter.WaiMaiAdapter;
 

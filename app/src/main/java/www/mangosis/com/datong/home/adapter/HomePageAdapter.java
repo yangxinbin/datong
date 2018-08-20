@@ -1,4 +1,4 @@
-package www.mangosis.com.datong.pages.adapter;
+package www.mangosis.com.datong.home.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.CardView;
@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.zhy.android.percent.support.PercentLinearLayout;
@@ -21,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import www.mangosis.com.datong.R;
-import www.mangosis.com.datong.pages.entity.ImageDeal;
+import www.mangosis.com.datong.home.entity.ImageDeal;
 import www.mangosis.com.datong.tools.GlideImageLoader;
 
 

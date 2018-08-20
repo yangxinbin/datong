@@ -1,4 +1,4 @@
-package www.mangosis.com.datong.pages.entity;
+package www.mangosis.com.datong.home.entity;
 
 import android.content.ContentResolver;
 import android.content.Context;

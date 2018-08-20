@@ -1,4 +1,4 @@
-package www.mangosis.com.datong.pages.homes;
+package www.mangosis.com.datong.home.home;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

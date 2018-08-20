@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import www.mangosis.com.datong.R;
-import www.mangosis.com.datong.pages.entity.ImageDeal;
+import www.mangosis.com.datong.home.entity.ImageDeal;
 import www.mangosis.com.datong.tools.GlideImageLoader;
 
 
@@ -30,8 +30,8 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     private int[] hotPlaceHidePosition = {5, 7};
     //type
-    public static final int TYPE_BANNER = 0;
-    public static final int TYPE_CIRCLER_SHOW = 1;
+    public static final int TYPE_CIRCLER_SHOW = 0;
+    public static final int TYPE_BANNER = 1;
     public static final int TYPE_RECOMMEND_ACTIVITY = 2;
     public static final int TYPE_NEARBY_ACTIVITY = 3;
     public static final int TYPE_HOT_ACTIVITY = 4;
@@ -44,12 +44,12 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
+            case TYPE_CIRCLER_SHOW:
+                return new CirclerShowViewHolder(LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.index_recycler_circler_waimai_show, parent, false));
             case TYPE_BANNER:
                 return new BannerViewHolder(LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.index_recycler_banner, parent, false));
-            case TYPE_CIRCLER_SHOW:
-                return new CirclerShowViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.index_recycler_circler_show, parent, false));
             case TYPE_RECOMMEND_ACTIVITY:
                 return new RecommendViewHolder(LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.index_recycler_recommend, parent, false));
@@ -129,9 +129,9 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public int getItemViewType(int position) {
         if (position == 0) {
-            return TYPE_BANNER;
-        } else if (position == 1) {
             return TYPE_CIRCLER_SHOW;
+        } else if (position == 1) {
+            return TYPE_BANNER;
         } else if (position == 2) {
             return TYPE_RECOMMEND_ACTIVITY;
         } else if (position == 3) {
@@ -201,7 +201,7 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public class PopularPlacesViewHolder extends RecyclerView.ViewHolder {
         LinearLayout list_item;
         ImageView pic_1;
-        TextView txt_name,tx_money,txt_what,txt_place,tx_far;
+        TextView txt_name, tx_money, txt_what, txt_place, tx_far;
 
         public PopularPlacesViewHolder(View itemView) {
             super(itemView);

@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 
 import www.mangosis.com.datong.base.BaseActivity;
-import www.mangosis.com.datong.pages.DaTongFragment;
-import www.mangosis.com.datong.pages.GroupFragment;
-import www.mangosis.com.datong.pages.HomePageFragment;
-import www.mangosis.com.datong.pages.OrderFragment;
-import www.mangosis.com.datong.pages.PersonalFragment;
+import www.mangosis.com.datong.home.DaTongFragment;
+import www.mangosis.com.datong.home.GroupFragment;
+import www.mangosis.com.datong.home.HomePageFragment;
+import www.mangosis.com.datong.home.OrderFragment;
+import www.mangosis.com.datong.home.PersonalFragment;
 import www.mangosis.com.datong.view.BottomBar;
 
 public class DaTongActivity extends BaseActivity {
