@@ -35,7 +35,7 @@ public class PlateWaiMaiFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.grid_waimai, container, false);
+        View view = inflater.inflate(R.layout.grid, container, false);
         gridView = (GridView) view.findViewById(R.id.gridview);
         ArrayList<HashMap<String, Object>> item = new ArrayList<HashMap<String, Object>>();
         for (int i = 0; i < res.length; i++) {

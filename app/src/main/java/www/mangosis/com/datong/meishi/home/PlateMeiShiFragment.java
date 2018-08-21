@@ -1,4 +1,4 @@
-package www.mangosis.com.datong.home.home;
+package www.mangosis.com.datong.meishi.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,26 +11,26 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import www.mangosis.com.datong.R;
-import www.mangosis.com.datong.meishi.MeiShiActivity;
 import www.mangosis.com.datong.waimai.WaiMaiActivity;
 
 
-public class PlateFragment extends Fragment {
+public class PlateMeiShiFragment extends Fragment {
     GridView gridView;
 
     int[] res = {
-            R.drawable.food,
-            R.drawable.play,
-            R.drawable.travel,
-            R.drawable.shopping,
-            R.drawable.supermarket,
-            R.drawable.takeaway,};
-    String[] titles = {"享美食", "享娱乐", "享旅游", "享购物", "享农超", "外卖"};
+            R.drawable.hot_pot,
+            R.drawable.barbecue,
+            R.drawable.buffet,
+            R.drawable.fast_food,
+            R.drawable.western_food,
+            R.drawable.japanese_food,
+            R.drawable.local_food,
+            R.drawable.dessert};
+    String[] titles = {"火锅", "烧烤烤肉", "自助餐", "小吃快餐", "西餐", "日韩料理", "地方菜系", "甜点饮品"};
 
     @Nullable
     @Override
@@ -50,19 +50,11 @@ public class PlateFragment extends Fragment {
 
         gridView.setAdapter(simpleAdapter);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            Intent intent;
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Toast.makeText(getContext(),titles[position], Toast.LENGTH_SHORT).show();
-                if (position == 0) {
-                    intent = new Intent(getActivity(), MeiShiActivity.class);
-                    startActivity(intent);
-                }
-                if (position == 5) {
-                    intent = new Intent(getActivity(), WaiMaiActivity.class);
-                    startActivity(intent);
-                }
-
+                Intent intent = new Intent(getActivity(), WaiMaiActivity.class);
+                startActivity(intent);
             }
         });
         return view;

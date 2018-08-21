@@ -7,6 +7,7 @@
     <color name="common_white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="common_black">#333333</color>
+    <color name="small_black">#666666</color>
     <color name="nav_bottom_normal">#999999</color>
     <color name="nav_bottom_select">#00b38b</color>
     <color name="nav_top_tvcoloe">#ffffff</color>
@@ -15,4 +16,6 @@
     <color name="recommend_first_message">#33000000</color>
     <color name="grayText">#999999</color>
     <color name="small_gray">#f8f8f8</color>
+    <color name="blue_meishi">#1598fd</color>
+
 </resources>
