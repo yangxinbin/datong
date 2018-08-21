@@ -33,8 +33,10 @@ public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public static final int TYPE_CIRCLER_SHOW = 0;
     //public static final int TYPE_BANNER = 1;
     //public static final int TYPE_RECOMMEND_ACTIVITY = 2;
-    public static final int TYPE_NEARBY_ACTIVITY = 1;
-    public static final int TYPE_HOT_ACTIVITY = 2;
+    public static final int TYPE_NICE_ACTIVITY = 1;
+    public static final int TYPE_MULTIPLEX_ACTIVITY = 2;
+
+    //public static final int TYPE_HOT_ACTIVITY = 3;
     private List<String> banner_images = new ArrayList<>();
 
     public MeiShiAdapter(Context context) {
@@ -53,12 +55,15 @@ public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             case TYPE_RECOMMEND_ACTIVITY:
                 return new RecommendViewHolder(LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.index_recycler_recommend, parent, false));*/
-            case TYPE_NEARBY_ACTIVITY:
-                return new RecommendViewHolder(LayoutInflater.from(parent.getContext())
+            case TYPE_NICE_ACTIVITY:
+                return new NiceViewHolder(LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.index_recycler_nice, parent, false));
-            case TYPE_HOT_ACTIVITY:
+            case TYPE_MULTIPLEX_ACTIVITY:
+                return new MultiPlexViewHolder(LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.index_recycler_multiplex, parent, false));
+/*            case TYPE_HOT_ACTIVITY:
                 return new PopularPlacesViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.homepage_nice_item, parent, false));
+                        .inflate(R.layout.homepage_nice_item, parent, false));*/
             default:
                 return null;
         }
@@ -80,11 +85,14 @@ public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     .setDelayTime(5000)
                     // .setOnBannerClickListener(this)
                     .start();
-        } else*/ if (holder instanceof CirclerShowViewHolder) {
+        } else*/
+        if (holder instanceof CirclerShowViewHolder) {
 
         }/* else if (holder instanceof RecommendViewHolder) {
 
-        }*/ else if (holder instanceof NearbyViewHolder) {
+        }*/ else if (holder instanceof NiceViewHolder) {
+
+        } else if (holder instanceof NiceViewHolder) {
 
         } else if (holder instanceof PopularPlacesViewHolder) {
 
@@ -108,8 +116,8 @@ public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     switch (type) {
                         //case TYPE_BANNER:
                         case TYPE_CIRCLER_SHOW:
-                        //case TYPE_RECOMMEND_ACTIVITY:
-                        case TYPE_NEARBY_ACTIVITY:
+                            //case TYPE_RECOMMEND_ACTIVITY:
+                        case TYPE_NICE_ACTIVITY:
                             return gridManager.getSpanCount();
                         default:
                             return 1;
@@ -123,7 +131,7 @@ public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 3;
     }
 
     @Override
@@ -135,9 +143,14 @@ public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         } else if (position == 2) {
             return TYPE_RECOMMEND_ACTIVITY;
         }*/ else if (position == 1) {
-            return TYPE_NEARBY_ACTIVITY;
+            return TYPE_NICE_ACTIVITY;
+        } /*else if (position == 2) {
+            return TYPE_MULTIPLEX_ACTIVITY;
         } else {
             return TYPE_HOT_ACTIVITY;
+        }*/
+        else {
+            return TYPE_MULTIPLEX_ACTIVITY;
         }
     }
 
@@ -171,11 +184,11 @@ public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     /*
     * 推荐活动的viewholder
     * */
-    public class RecommendViewHolder extends RecyclerView.ViewHolder {
+    public class MultiPlexViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageview;
 
-        public RecommendViewHolder(View itemView) {
+        public MultiPlexViewHolder(View itemView) {
             super(itemView);
             imageview = (ImageView) itemView.findViewById(R.id.recommend_second_image);
         }
@@ -184,11 +197,11 @@ public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     /*
     * 推荐附近的viewholder
     * */
-    public class NearbyViewHolder extends RecyclerView.ViewHolder {
+    public class NiceViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageview;
 
-        public NearbyViewHolder(View itemView) {
+        public NiceViewHolder(View itemView) {
             super(itemView);
             imageview = (ImageView) itemView.findViewById(R.id.recommend_second_image);
         }

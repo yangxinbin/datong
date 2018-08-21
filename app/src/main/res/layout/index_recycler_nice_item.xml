@@ -197,5 +197,7 @@
         </LinearLayout>
 
     </LinearLayout>
-
+    <www.mangosis.com.datong.meishi.complexmenu.SelectMenuView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </com.zhy.android.percent.support.PercentLinearLayout>
