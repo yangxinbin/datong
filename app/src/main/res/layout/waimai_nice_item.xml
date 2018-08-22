@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/pic_1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/pic_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_major"
+            android:layout_marginTop="@dimen/spacing_major"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:text="必胜宅急送（锦秋店）"
+                android:textColor="@color/common_black"
+                android:textSize="@dimen/textSize" />
+
+            <LinearLayout
+                android:id="@+id/l0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <www.mangosis.com.datong.tools.RatingBar
+                        android:id="@+id/rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:selectedNumber="2.5"
+                        app:starDistance="2dp"
+                        app:starEmptyRes="@drawable/star_normal"
+                        app:starHalfRes="@drawable/star_half"
+                        app:starIsFull="false"
+                        app:starSelectedRes="@drawable/star_selected" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tx_time_far"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40分钟 | 88m"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/grayText"
+                    android:textSize="@dimen/commom_tv_size_12" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@id/l0"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/txt_place"
+                    android:text="起送¥20 | 配送¥3 | 人均¥30"
+                    android:textColor="@color/grayText"
+                    android:textSize="@dimen/commom_tv_size_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView_site1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/site" />
+
+                    <TextView
+                        android:id="@+id/txt_site1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="满26减16，满48减20，满78减32"
+                        android:textColor="@color/grayText"
+                        android:textSize="@dimen/commom_tv_size_12" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView_site2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/site" />
+
+                    <TextView
+                        android:id="@+id/txt_site2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="满26减16，满48减20，满78减32"
+                        android:textColor="@color/grayText"
+                        android:textSize="@dimen/commom_tv_size_12" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/small_gray" />
+
+</LinearLayout>

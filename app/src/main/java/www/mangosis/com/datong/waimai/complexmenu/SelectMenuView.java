@@ -2,6 +2,7 @@ package www.mangosis.com.datong.waimai.complexmenu;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -86,6 +87,7 @@ public class SelectMenuView extends LinearLayout {
     private List<List<String>> mSubjectDataList2;
 
     private int mTabRecorder = -1;
+    private View content;
 
     public SelectMenuView(Context context) {
         super(context);
@@ -331,7 +333,9 @@ public class SelectMenuView extends LinearLayout {
     }
 
     public void setDropDownMemu(View contentView) {
-
+        this.content = contentView;
+        mContentLayout.removeAllViews();
+        mContentLayout.addView(contentView);
     }
 
     private void handleClickSubjectView() {
@@ -383,6 +387,8 @@ public class SelectMenuView extends LinearLayout {
 
     private void dismissPopupWindow() {
         mContentLayout.removeAllViews();
+        Log.v("yyyyyyyyyyy","---------q");
+        setDropDownMemu(content);
         setTabClose();
     }
 
@@ -426,7 +432,7 @@ public class SelectMenuView extends LinearLayout {
         if (tab == TAB_SUBJECT) {
             mSubjectText.setTextColor(getResources().getColor(R.color.grayText));
             mSubjectArrowImage.setImageResource(R.drawable.small_triangle);
-        }else if (tab == TAB_NEARBY) {
+        } else if (tab == TAB_NEARBY) {
             mNearbyText.setTextColor(getResources().getColor(R.color.grayText));
             mNearbyArrowImage.setImageResource(R.drawable.small_triangle);
         } else if (tab == TAB_SORT) {

@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <www.mangosis.com.datong.waimai.complexmenu.SelectMenuView
+        android:id="@+id/selectMenuView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
