@@ -57,8 +57,10 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 return new RecommendViewHolder(LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.index_recycler_area, parent, false));
             case TYPE_HOT_ACTIVITY:
-                return new PopularPlacesViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.homepage_nice_item, parent, false));
+/*                return new PopularPlacesViewHolder(LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.homepage_nice_item, parent, false));*/
+                return new MultiPlexViewHolder(LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.index_recycler_multiplex_meishi, parent, false));
             default:
                 return null;
         }
@@ -123,7 +125,7 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 4;
     }
 
     @Override
@@ -166,7 +168,18 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             cardView = (CardView) index_circler_show.findViewById(R.id.index_circleshow_cardview);
         }
     }
+    /*
+    * 推荐活动的viewholder
+    * */
+    public class MultiPlexViewHolder extends RecyclerView.ViewHolder {
 
+        ImageView imageview;
+
+        public MultiPlexViewHolder(View itemView) {
+            super(itemView);
+            imageview = (ImageView) itemView.findViewById(R.id.recommend_second_image);
+        }
+    }
 
     /*
     * 推荐活动的viewholder

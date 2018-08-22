@@ -13,15 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.youth.banner.Banner;
-import com.youth.banner.BannerConfig;
 import com.zhy.android.percent.support.PercentLinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import www.mangosis.com.datong.R;
-import www.mangosis.com.datong.home.entity.ImageDeal;
-import www.mangosis.com.datong.tools.GlideImageLoader;
 
 
 public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -60,7 +57,7 @@ public class MeiShiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                         .inflate(R.layout.index_recycler_nice, parent, false));
             case TYPE_MULTIPLEX_ACTIVITY:
                 return new MultiPlexViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.index_recycler_multiplex, parent, false));
+                        .inflate(R.layout.index_recycler_multiplex_meishi, parent, false));
 /*            case TYPE_HOT_ACTIVITY:
                 return new PopularPlacesViewHolder(LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.homepage_nice_item, parent, false));*/

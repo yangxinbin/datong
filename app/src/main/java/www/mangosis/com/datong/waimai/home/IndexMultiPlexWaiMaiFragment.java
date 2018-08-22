@@ -1,4 +1,4 @@
-package www.mangosis.com.datong.meishi.home;
+package www.mangosis.com.datong.waimai.home;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,12 +10,12 @@ import butterknife.ButterKnife;
 import www.mangosis.com.datong.R;
 
 
-public class IndexMultiPlexFragment extends Fragment {
+public class IndexMultiPlexWaiMaiFragment extends Fragment {
     View view = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.index_recycler_multi_item, container, false);
+        view = inflater.inflate(R.layout.index_recycler_multi_item_waimai, container, false);
         ButterKnife.bind(this, view);
         return view;
     }
