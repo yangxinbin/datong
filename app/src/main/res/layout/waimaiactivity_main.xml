@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="expendCut"
-                android:text="8个活动"
+                android:text="查看更多 ▼"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -100,14 +100,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginRight="10dp"
-            android:src="@drawable/icon_menu" />
+            android:src="@drawable/write_share" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginRight="16dp"
-            android:src="@drawable/icon_car" />
+            android:src="@drawable/collect1" />
 
     </android.support.v7.widget.Toolbar>
 

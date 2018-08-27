@@ -58,12 +58,12 @@ public class AddButton extends View implements View.OnClickListener {
 		paint.setStrokeWidth(4);
 		paint.setStyle(Paint.Style.FILL);
 		paint.setAntiAlias(true);
-		paint.setColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
+		paint.setColor(ContextCompat.getColor(getContext(), R.color.add));
 
 		textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		textPaint.setTextAlign(Paint.Align.CENTER);
 		textPaint.setTextSize(ViewUtils.sp2px(getContext(), 12));
-		textPaint.setColor(Color.WHITE);
+		textPaint.setColor(ContextCompat.getColor(getContext(), R.color.add_logo));
 		textPaint.setAntiAlias(true);
 
 		initAdd();

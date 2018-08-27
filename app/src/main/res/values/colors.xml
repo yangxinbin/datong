@@ -378,4 +378,7 @@
     <color name="type_checked">#535353</color>
     <color name="divider_gray">#fafafa</color>
     <color name="dividerColor">#BDBDBD</color>
+    <color name="add">#dcf3ff</color>
+    <color name="add_logo">#1599fe</color>
+
 </resources>
