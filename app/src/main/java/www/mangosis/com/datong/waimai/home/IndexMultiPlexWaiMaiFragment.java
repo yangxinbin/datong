@@ -11,11 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import www.mangosis.com.datong.waimai.listdetail.WaiMaiListMainActivity;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
-
-import org.greenrobot.eventbus.EventBus;
-
-import java.util.Arrays;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -56,13 +53,18 @@ public class IndexMultiPlexWaiMaiFragment extends Fragment {
         recycle.removeAllViews();
         recycle.setAdapter(adapter);
     }
-    private WaiMaiListAdapter.OnWaiMaiListClickListener mOnItemClickListener = new WaiMaiListAdapter.OnWaiMaiListClickListener() {
-        @Override
-        public void onItemClick(View view, int position) {
-            //Intent intent = new Intent(getActivity(), WaiMaiDetailActivity.class);
-            //startActivity(intent);
-        }
-    };
+    private WaiMaiListAdapter.OnWaiMaiListClickListener mOnItemClickListener;
+
+    {
+        mOnItemClickListener = new WaiMaiListAdapter.OnWaiMaiListClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(getActivity(), WaiMaiListMainActivity.class);
+                startActivity(intent);
+            }
+        };
+    }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();

@@ -58,8 +58,14 @@
         <activity
             android:name=".waimai.WaiMaiActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"></activity>
-        <activity android:name=".meishi.MeiShiActivity"
+        <activity
+            android:name=".meishi.MeiShiActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity android:name=".waimai.listdetail.WaiMaiListMainActivity"></activity>
+        <activity
+            android:name=".waimai.listdetail.detail.DetailActivity"
+            android:theme="@style/NoTitleTranslucentTheme"></activity>
+        <activity android:name=".waimai.listdetail.detail.ShopDetailActivity" />
     </application>
 
 </manifest>

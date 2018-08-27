@@ -17,4 +17,7 @@
     <dimen name="spacing_minor">10dp</dimen>
     <dimen name="spacing_major">10dp</dimen>
     <dimen name="spacing_massive">24dp</dimen>
+    <dimen name="cut_margin">51dp</dimen>
+    <dimen name="add_width">75dp</dimen>
+    <dimen name="shopcar_height">65dp</dimen>
 </resources>

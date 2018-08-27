@@ -3,4 +3,6 @@
     <string name="recommendActivity">推荐活动</string>
     <string name="recommend_first_message">沙滩帆布挎包，满满的牛仔风情</string>
     <string name="hot_places">热门场所</string>
+    <string name="scroll_behavior">@string/appbar_scrolling_view_behavior</string>
+    <string name="detail_header_behavior">www.mangosis.com.datong.waimai.listdetail.detail.DetailHeaderBehavior</string>
 </resources>

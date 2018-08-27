@@ -2,6 +2,9 @@ package www.mangosis.com.datong;
 
 import android.app.Application;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.imagepipeline.core.ImagePipelineConfig;
+
 
 public class DaTongApplication extends Application {
 
@@ -14,5 +17,7 @@ public class DaTongApplication extends Application {
         //包括BD09LL和GCJ02两种坐标，默认是BD09LL坐标。
         //SDKInitializer.setCoordType(CoordType.BD09LL);
         //MobSDK.init(getApplicationContext(), "264de1c3bdfe9", "3df56a487772e2af23564c4d553bd4ae");
+        ImagePipelineConfig frescoConfig = ImagePipelineConfig.newBuilder(this).setDownsampleEnabled(true).build();
+        Fresco.initialize(this, frescoConfig);
     }
 }
