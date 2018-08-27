@@ -143,7 +143,7 @@ public class AddButton extends View implements View.OnClickListener {
 		addPaint.setStrokeWidth(3);
 		addPaint.setStyle(Paint.Style.STROKE);
 		addPaint.setAntiAlias(true);
-		addPaint.setColor(Color.WHITE);
+		addPaint.setColor(ContextCompat.getColor(getContext(), R.color.add_logo));
 
 		int height = getHeight();
 		int padding = getHeight() / 4;
