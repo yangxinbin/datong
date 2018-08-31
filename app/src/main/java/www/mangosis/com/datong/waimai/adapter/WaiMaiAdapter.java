@@ -60,7 +60,7 @@ public class WaiMaiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 /*                return new PopularPlacesViewHolder(LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.homepage_nice_item, parent, false));*/
                 return new MultiPlexViewHolder(LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.index_recycler_multiplex_meishi, parent, false));
+                        .inflate(R.layout.index_recycler_multiplex_waimai, parent, false));
             default:
                 return null;
         }

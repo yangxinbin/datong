@@ -21,7 +21,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.github.florent37.viewanimator.ViewAnimator;
 
 import com.shizhefei.view.indicator.IndicatorViewPager;
@@ -45,6 +44,7 @@ import www.mangosis.com.datong.waimai.listdetail.behaviors.AppBarBehavior;
 import www.mangosis.com.datong.waimai.listdetail.detail.ShopDetailActivity;
 import www.mangosis.com.datong.waimai.listdetail.fragments.FirstFragment;
 import www.mangosis.com.datong.waimai.listdetail.fragments.SecondFragment;
+import www.mangosis.com.datong.waimai.listdetail.fragments.ThirdFragment;
 import www.mangosis.com.datong.waimai.listdetail.utils.ViewUtils;
 
 
@@ -148,7 +148,7 @@ public class WaiMaiListMainActivity extends WaiMaiBaseActivity implements AddWid
     private class ViewpagerAdapter extends IndicatorViewPager.IndicatorFragmentPagerAdapter {
         private LayoutInflater inflater;
         private int padding;
-        private String[] tabs = new String[]{"商品", "评价"};
+        private String[] tabs = new String[]{"菜单", "评价", "商家"};
 
         ViewpagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
@@ -158,7 +158,7 @@ public class WaiMaiListMainActivity extends WaiMaiBaseActivity implements AddWid
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override
@@ -175,8 +175,12 @@ public class WaiMaiListMainActivity extends WaiMaiBaseActivity implements AddWid
             switch (position) {
                 case 0:
                     return firstFragment;
+                case 1:
+                    return new SecondFragment();
+                case 2:
+                    return new ThirdFragment();
             }
-            return new SecondFragment();
+            return firstFragment;
         }
     }
 
